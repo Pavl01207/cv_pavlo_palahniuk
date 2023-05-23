@@ -1,0 +1,325 @@
+@import url("reset.css");
+/*-------------------*/
+body {
+	font-family: "Space Grotesk", serif;
+	font-weight: 400;
+	font-style: 1.125rem;
+	color: #003049;
+	background-color:aliceblue;
+}
+/*-------------------*/
+[class*="__container"] {
+	max-width: 76.875rem;
+	padding-left: .9375rem;
+	padding-right: .9375rem;
+	margin: 0 auto;
+}
+/*---------head block-----------*/
+.head {
+	padding-top: 1.875rem;
+}
+.head__container {
+	display: flex;
+	align-items: center;
+	gap: 3.125rem;
+}
+.head__title {
+	font-size: 3rem;
+	color: cornflowerblue;
+}
+.head__value {
+	flex: 1 1 auto;
+	font-size: 1.75rem;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: cornflowerblue;
+}
+.head__value::before {
+	position: absolute;
+	content: "";
+	top: 50%;
+	left: 0;
+	background-color:#003049;
+	width: 300px;
+	height: 4px;
+}
+.head__value::after {
+	position: absolute;
+	content: "";
+	right: 0;
+	top: 50%;
+	width: 300px;
+	height: 4px;
+	background-color: #003049;
+}
+/*---------body block-----------*/
+.body {
+	padding-top: 1.875rem;
+}
+.body__container {
+	display: grid;
+	grid-template-columns: 0.5fr 1fr;
+	align-items: center;
+}
+.body__image {
+	position: relative;
+	padding-bottom: 80%;
+}
+.body__image::before {
+	position: absolute;
+	content: "";
+	width: 50%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: #003049;
+	transform: translate(-10%, 10%);
+}
+.body__image img{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	object-fit: contain;
+}
+.body__profile {
+	font-size: 2.375rem;
+}
+.body__profile span {
+	color: cornflowerblue;
+}
+/*---------drop menu-----------*/
+.experience__item {
+	position: relative;
+	display: inline-block;
+}
+.experience__item:nth-child(3)::after {
+	position: absolute;
+	content: "";
+	background: url(img/arrow.png) right no-repeat;
+	width: 24px;
+	height: 24px;
+	margin-left: .3125rem;
+	margin-top: .3125rem
+	transition: opacity 0.3s ease 0s;
+}
+.experience__item:nth-child(4)::after {
+	position: absolute;
+	content: "";
+	background: url(img/arrow.png) right no-repeat;
+	width: 24px;
+	height: 24px;
+	margin-left: .3125rem;
+	margin-top: .3125rem;
+	transition: opacity 0.3s ease 0s;
+}
+.experience__item:hover:nth-child(3)::after{
+	opacity: 0;
+}
+.experience__item:hover:nth-child(4)::after{
+	opacity: 0;
+}
+.experience__item:not(:last-child) {
+	margin-right: 10px;
+}
+.experience__item:hover .experience__sub-list{
+	opacity: 1;
+	visibility: visible;
+	top: 100%;
+}
+.experience__link {
+	font-size: 1.5rem;
+	color: #003049;
+	display: inline-block;
+	padding: 5px 0px;
+}
+.experience__link:hover {
+	text-decoration: underline;
+}
+.experience__sub-list {
+	text-transform: uppercase;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: cornflowerblue;
+	border-radius: 5px;
+	padding: 15px;
+	position: absolute;
+	min-width: 150px;
+	top: 130%;
+	left: 0%;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.5s ease 0s;
+	z-index: 2;
+}
+
+.experience__sub-item:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+.experience__sub-link {
+	font-size: 16px;
+	color: #003049;
+}
+.experience__sub-link:hover {
+	text-decoration: underline;
+}
+/*---------about block-----------*/
+.about {
+	padding-top: 6.25rem;
+	font-size: 1.5rem;
+	padding-bottom: 6.25rem;
+}
+.about__container {
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+}
+.about__column {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: .625rem;
+}
+.about__education {
+	display: flex;
+}
+.about__contacts {
+	display: flex;
+}
+.about__experience {
+	display: flex;
+}
+.about__skills {
+	display:grid;
+}
+/*-------------------*/
+.education {
+}
+.education__title {
+	margin-right: .625rem;
+	writing-mode: vertical-rl;
+	color: cornflowerblue;
+	text-transform: uppercase;
+}
+.education__list {
+	position: relative;
+	padding-left: .625rem;
+}
+.education__list::before {
+	position: absolute;
+	content: "";
+	width: .125rem;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: #003049;
+}
+.education__item:not(:last-child){
+	margin-bottom: 5px;
+}
+/*-------------------*/
+.experience {
+}
+.experience__title {
+	margin-right: .625rem;
+	writing-mode: vertical-rl;
+	color: cornflowerblue;
+	text-transform: uppercase;
+}
+.experience__list {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	position: relative;
+	padding-left: .625rem;
+}
+.experience__list::before {
+	position: absolute;
+	content: "";
+	width: .125rem;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: #003049;
+}
+/*-------------------*/
+.skills {
+	display: grid;
+	gap: .3125rem;
+}
+.skills__item {
+	display: grid;
+	gap: .625rem;
+}
+.skills__label {
+}
+.skills__line {
+	height: .5rem;
+	background-color:lightsteelblue;
+	border-radius: .125rem;
+	position: relative;
+	padding-right: .625rem;
+}
+.skills__line span {
+	background-color:cornflowerblue;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+}
+/*-------------------*/
+.contacts {
+}
+.contacts__title {
+	margin-right: .625rem;
+	writing-mode: vertical-rl;
+	color: cornflowerblue;
+	text-transform: uppercase;
+}
+.contacts__items {
+	display: grid;
+	gap: .3125rem;
+	position: relative;
+	padding-left: .625rem;
+}
+.contacts__items::before {
+	position: absolute;
+	content: "";
+	width: .125rem;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: #003049;
+}
+.contacts__item {
+	position: relative;
+	padding-left: 3rem;
+}
+.contacts__item:hover.contacts__item::before {
+	transform: scale(1.2);
+}
+.contacts__item::before {
+	position: absolute;
+	content: "";
+	background: url(img/icons/mail.png) left no-repeat;
+	width: 24px;
+	height: 24px;
+	margin-left: -2.625rem;
+	transition: transform 0.3s ease 0s;
+}
+.contacts__item:nth-child(2):before {
+	background: url(img/icons/telephone.png) left no-repeat;
+}
+.contacts__item:nth-child(3):before {
+	background: url(img/icons/linkedin.png) left no-repeat;
+}
+.contacts__item:nth-child(4):before {
+	background: url(img/icons/upwork.png) left no-repeat;
+}
+.contacts__item:nth-child(5):before {
+	background: url(img/icons/instagram.png) left no-repeat;
+}
